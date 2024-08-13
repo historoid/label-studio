@@ -1,0 +1,6 @@
+[submodule "label-studio-ml-backend"]
+	path = label-studio-ml-backend
+	url = https://github.com/historoid/label-studio-ml-backend.git
+[submodule "segment-anything-2"]
+	path = segment-anything-2
+	url = https://github.com/historoid/sam2.git
