@@ -1,0 +1,6 @@
+[submodule "label-studio-config"]
+	path = label-studio-config
+	url = https://github.com/HumanSignal/label-studio-ml-backend.git
+[submodule "sam2-config"]
+	path = sam2-config
+	url = https://github.com/facebookresearch/segment-anything-2.git
