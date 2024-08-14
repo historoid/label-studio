@@ -1,0 +1,31 @@
+# images
+*.png
+*.PNG
+*.gif
+*.GIF
+*.tif
+*.TIF
+*.tiff
+*.TIFF
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs and temp files
+*.log
+*.temp
+*.bak
+*.swp
+*.swo
+*.~*
