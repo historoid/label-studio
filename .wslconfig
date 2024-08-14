@@ -1,0 +1,5 @@
+# put this file at C:\Users\<username>\.wslconfig
+[wsl2]
+memory=32GB
+processors=8
+localhostforwarding=true
