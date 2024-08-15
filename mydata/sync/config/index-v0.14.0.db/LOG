@@ -1,0 +1,29 @@
+=============== Aug 15, 2024 (UTC) ===============
+09:35:21.884276 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:35:21.888060 db@open opening
+09:35:21.888434 version@stat F·[] S·0B[] Sc·[]
+09:35:21.889668 db@janitor F·2 G·0
+09:35:21.889683 db@open done T·1.613802ms
+09:35:23.245108 memdb@flush N·49 S·1KiB
+09:35:23.255149 memdb@flush created L0@3 N·49 S·611B "\ndb..ion,v49":"\nla..ime,v19"
+09:35:23.255187 version@stat F·[1] S·611B[611B] Sc·[0.25]
+09:35:23.258077 memdb@flush committed F·1 T·12.921917ms
+09:35:23.258114 journal@remove removed @1
+09:35:23.258122 table@compaction range L-1 "":""
+09:35:23.258131 table@compaction L0·1 -> L1·0 S·611B Q·49
+09:35:23.260157 table@build created L1@4 N·4 S·207B "\ndb..ion,v49":"\nla..ime,v19"
+09:35:23.260174 version@stat F·[0 1] S·207B[0B 207B] Sc·[0.00 0.00]
+09:35:23.263054 table@compaction committed F~ S-404B Ke·0 D·45 T·4.910379ms
+09:35:23.263120 table@remove removed @3
+09:35:26.267245 db@close closing
+09:35:26.267311 db@close done T·65.584µs
+=============== Aug 15, 2024 (UTC) ===============
+09:35:49.740059 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:35:49.740123 version@stat F·[0 1] S·207B[0B 207B] Sc·[0.00 0.00]
+09:35:49.740129 db@open opening
+09:35:49.740147 journal@recovery F·1
+09:35:49.740709 journal@recovery recovering @2
+09:35:49.742241 memdb@flush created L0@5 N·7 S·281B "\x06\x00\x00..\x00\x00\x00,v52":"\npr..ion,v50"
+09:35:49.742325 version@stat F·[1 1] S·488B[281B 207B] Sc·[0.25 0.00]
+09:35:49.747027 db@janitor F·4 G·0
+09:35:49.747040 db@open done T·6.907787ms
