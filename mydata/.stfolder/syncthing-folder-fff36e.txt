@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: uwfnt-eqjkd
-created: 2024-08-14T11:20:39Z
