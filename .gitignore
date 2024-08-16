@@ -29,6 +29,7 @@ Desktop.ini
 *.swp
 *.swo
 *.~*
+*.env
 
 # Folder
 mydata/sync/config
