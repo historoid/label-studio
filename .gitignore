@@ -29,6 +29,7 @@ Desktop.ini
 *.swp
 *.swo
 *.~*
+*.sqlite3
 
 # Folder
-mydata/
+mydata/sync/config
