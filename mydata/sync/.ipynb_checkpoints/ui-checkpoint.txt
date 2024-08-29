@@ -1,0 +1,159 @@
+<View>  <!-- note -->
+  <TextArea name="textarea" toName="image" placeholder="comment" crosshair="true" editable="true"/>
+  
+  <!-- 画像 -->
+  <Image name="image" value="$image" smoothing="true" zoom="true" brightnessControl="true" crosshair="true"/>
+  
+  <!-- 撮影位置分類 -->
+  <Header value="Imaging Views" />
+  <Choices name="position" toName="image" choice="single" showInline="true">
+    <Choice value="Upper" hotkey="1" hint="上顎咬合面の画像です。"/>
+    <Choice value="Lower" hotkey="2" hint="下顎咬合面の画像です。"/>
+    <Choice value="Front" hotkey="3" hint="正面の画像です。"/>
+    <Choice value="Left" hotkey="4" hint="左側方面の画像です。"/>
+    <Choice value="Right" hotkey="5" hint="右側方面の画像です。"/>
+    <Choice value="Non-Typical" hotkey="6" hint="典型的な5枚法以外の画像です。"/>
+    <Choice value="Non-IOI" hotkey="7" hint="口腔内写真ではない。"/>
+  </Choices>
+  
+  <!-- 歯のセグメンテーション -->
+  <Header value="歯牙（矩形）" />
+  <RectangleLabels name="rectangle_tooth" toName="image" smart="true">
+    <Label value="tooth" hotkey="8" hint="境界明瞭な1歯" background="#AAEBAA" />
+    <Label value="unclear" hotkey="9" hint="歯ではあるが不明瞭なもの。背景。" background="#A0AFFF" />
+  </RectangleLabels>
+  <Header value="歯牙（ブラシ）" />
+  <BrushLabels name="brush_tooth" toName="image">
+    <Label value="tooth" hotkey="0" hint="境界明瞭な1歯" background="#AAEBAA" />
+    <Label value="unclear" hotkey="-" hint="歯ではあるが不明瞭なもの。背景。" background="#A0AFFF" />
+  </BrushLabels>
+  
+  <!-- 歯種分類 -->
+  <Header value="歯種" />
+  <Choices name="tooth_type" toName="image" perRegion="true" showInline="true" choice="multiple"
+           visibleWhen="region-selected"  whenLabelValue="tooth">
+    <View>
+      <Choice value="11" hint="上顎右側中切歯"/>
+      <Choice value="12" hint="上顎右側側切歯"/>
+      <Choice value="13" hint="上顎右側犬歯"/>
+      <Choice value="14" hint="上顎右側第一小臼歯"/>
+      <Choice value="15" hint="上顎右側第二小臼歯"/>
+      <Choice value="16" hint="上顎右側第一大臼歯"/>
+      <Choice value="17" hint="上顎右側第二大臼歯"/>
+      <Choice value="18" hint="上顎右側第三大臼歯"/>
+    </View>
+
+    <View>
+      <Choice value="21" hint="上顎左側中切歯"/>
+      <Choice value="22" hint="上顎左側側切歯"/>
+      <Choice value="23" hint="上顎左側犬歯"/>
+      <Choice value="24" hint="上顎左側第一小臼歯"/>
+      <Choice value="25" hint="上顎左側第二小臼歯"/>
+      <Choice value="26" hint="上顎左側第一大臼歯"/>
+      <Choice value="27" hint="上顎左側第二大臼歯"/>
+      <Choice value="28" hint="上顎左側第三大臼歯"/>
+    </View>
+    
+    <View>
+      <Choice value="31" hint="下顎左側中切歯"/>
+      <Choice value="32" hint="下顎左側切歯"/>
+      <Choice value="33" hint="下顎左側犬歯"/>
+      <Choice value="34" hint="下顎左側第一小臼歯"/>
+      <Choice value="35" hint="下顎左側第二小臼歯"/>
+      <Choice value="36" hint="下顎左側第一大臼歯"/>
+      <Choice value="37" hint="下顎左側第二大臼歯"/>
+      <Choice value="38" hint="下顎左側第三大臼歯"/>
+    </View>
+    
+    <View>
+      <Choice value="41" hint="下顎右側中切歯"/>
+      <Choice value="42" hint="下顎右側側切歯"/>
+      <Choice value="43" hint="下顎右側犬歯"/>
+      <Choice value="44" hint="下顎右側第一小臼歯"/>
+      <Choice value="45" hint="下顎右側第二小臼歯"/>
+      <Choice value="46" hint="下顎右側第一大臼歯"/>
+      <Choice value="47" hint="下顎右側第二大臼歯"/>
+      <Choice value="48" hint="下顎右側第三大臼歯"/>
+    </View>
+    
+    <View>
+      <Choice value="51" hint="上顎右側乳中切歯"/>
+      <Choice value="52" hint="上顎右側乳側切歯"/>
+      <Choice value="53" hint="上顎右側乳犬歯"/>
+      <Choice value="54" hint="上顎右側第一乳臼歯"/>
+      <Choice value="55" hint="上顎右側第二乳臼歯"/>
+    </View>
+
+    <View>
+      <Choice value="61" hint="上顎左側乳中切歯"/>
+      <Choice value="62" hint="上顎左側乳側切歯"/>
+      <Choice value="63" hint="上顎左側乳犬歯"/>
+      <Choice value="64" hint="上顎左側第一乳臼歯"/>
+      <Choice value="65" hint="上顎左側第二乳臼歯"/>
+    </View>
+    
+    <View>
+      <Choice value="71" hint="上顎左側乳中切歯"/>
+      <Choice value="72" hint="上顎左側乳側切歯"/>
+      <Choice value="73" hint="上顎右側乳犬歯"/>
+      <Choice value="74" hint="上顎右側第一乳臼歯"/>
+      <Choice value="75" hint="上顎右側第二乳臼歯"/>
+    </View>
+
+    <View>
+      <Choice value="81" hint="上顎左側乳中切歯"/>
+      <Choice value="82" hint="上顎左側乳側切歯"/>
+      <Choice value="83" hint="上顎左側乳犬歯"/>
+      <Choice value="84" hint="上顎左側第一乳臼歯"/>
+      <Choice value="85" hint="上顎左側第二乳臼歯"/>
+    </View>
+    
+    <View>
+      <Choice value="過剰歯" alias="supernumerary_tooth"/>
+      <Choice value="分割歯" alias="separated_tooth" hint="ヘミセクション等で分割された歯"/>
+      <Choice value="補助歯" alias="supplementary_tooth" hint="間隙を埋めるための余分な歯"/>
+      <Choice value="その他" alias="unclear_tooth" hint="どの分類にも当てはまらないもの。"/>
+    </View>
+  </Choices>
+  
+  <!-- 大まかな分類 -->
+  <Header value="臨床状態の大分類" />
+  <Choices name="main_condition" toName="image" perRegion="true" showInline="true" choice="multiple" 
+           visibleWhen="region-selected" whenTagName="brush_tooth" whenLabelValue="tooth">
+    <!-- 歯の状態 -->
+    <View>
+      <Choice value="未処置の健全歯"  alias="intact" hotkey="q" hint="健全かつ未処置"/>
+      <Choice value="シーラントありの健全歯"  alias="sealant_intact" hotkey="w" hint="シーラントを施した健全歯"/>
+      <Choice value="カリエス"  alias="caries" hotkey="e" hint="う蝕がある歯。程度は問わない。"/>
+      <Choice value="残根"  alias="root_stump" hotkey="r" hint="残根状態"/>
+    </View>
+    <!-- 補綴系 -->
+    <View>
+      <Choice value="全部被覆冠" alias="complete_cronw" hotkey="t" hint="歯冠全体を覆う冠。材料は問わない。"/>
+      <Choice value="Tec" alias="temporary_cronw" hotkey="y" hint="明らかにTecに見えるもの。プロビは「全部被覆冠」を選択。"/>
+      <Choice value="部分被覆冠" alias="partial_crown" hotkey="u" hint="歯冠の一部を覆う冠。材料は問わない"/>
+      <Choice value="ポンティック" alias="pontic" hotkey="i" hint="ブリッジやT-Fixの宙吊りの部分。材料は問わない。"/>
+      <Choice value="インレー" alias="inlay" hotkey="o" hint="インレー（アンレー含む。材料は問わない）"/>
+      <Choice value="支台歯・コア" alias="abutment_tooth" hotkey="p" hint="支台築造された歯"/>
+      <Choice value="インプラント" alias="implant" hotkey="a" hint="明らかにインプラントとわかる歯。治療段階は問わない。"/>
+    </View>
+    <!-- 保存修復系 -->
+    <View>
+      <Choice value="CR" alias="resin_filling" hotkey="s" hint="レジン充填"/>
+      <Choice value="仮封・セメント" alias="temporary_sealling" hotkey="d" hint="実際に仮封か、治療完了かは問わない。"/>
+      <Choice value="アマルガム" alias="amalgam" hotkey="f" hint="アマルガム充填"/>
+      <Choice value="暫間固定" alias="t-fix" hotkey="g" hint="暫間固定されているもの。"/>
+    </View>
+    <!-- 義歯系 -->
+    <View>
+      <Choice value="人工歯" alias="artificial_tooth" hotkey="h" hint="人工歯。素材は問わない。"/>
+      <Choice value="欠損部" alias="lack_region" hotkye="j" hint="欠損部位"/>
+      <Choice value="根面板" alias="root_cap" hotkye="k" hint="オーバーデンチャーの存在を確認すること。"/>
+    </View>
+    <!-- 小児矯正系 -->
+    <View>
+      <Choice value="矯正装置" alias="ortho_tooth" hotkye="l" hint="ブラケット等の矯正器具は付属した歯"/>
+    </View>
+  </Choices>
+
+</View>
